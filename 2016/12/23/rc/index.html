@@ -88,12 +88,12 @@
 开发环境在线编辑器推荐codepen，IDE推荐WebStorm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React">
-<meta property="og:url" content="http://yoursite.com/2016/12/09/react/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/12/23/rc/index.html">
 <meta property="og:site_name" content="Hcy's 札记">
 <meta property="og:description" content="最近学习了一下React的使用，现在对这段时间学习到的知识做一下记录。网上有很多学习React的资料，比如阮一峰的React 入门实例教程，css88网站的React中文版资料，React官网。前面两个资料都比较旧，官网上面已经到了v15.4.0了，所以这篇笔记记录的这些知识点都是参考官网的。有错误或者疏漏希望各位看客大神多多指正！
 开发环境在线编辑器推荐codepen，IDE推荐WebStorm">
 <meta property="og:image" content="http://oij3dl0nn.bkt.clouddn.com/blog/20161223/135625971.gif">
-<meta property="og:updated_time" content="2016-12-23T13:39:51.904Z">
+<meta property="og:updated_time" content="2016-12-23T13:44:07.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React">
 <meta name="twitter:description" content="最近学习了一下React的使用，现在对这段时间学习到的知识做一下记录。网上有很多学习React的资料，比如阮一峰的React 入门实例教程，css88网站的React中文版资料，React官网。前面两个资料都比较旧，官网上面已经到了v15.4.0了，所以这篇笔记记录的这些知识点都是参考官网的。有错误或者疏漏希望各位看客大神多多指正！
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/09/react/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/23/rc/"/>
 
 
 
@@ -255,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/09/react/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/23/rc/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="chengyuan.huang">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-09T20:20:12+08:00">
-                2016-12-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-23T21:43:50+08:00">
+                2016-12-23
               </time>
             
 
@@ -313,8 +313,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/09/react/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/09/react/" itemprop="commentCount"></span>
+                <a href="/2016/12/23/rc/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/rc/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -341,7 +341,7 @@
 
       
         <p>最近学习了一下<code>React</code>的使用，现在对这段时间学习到的知识做一下记录。网上有很多学习<code>React</code>的资料，比如阮一峰的<a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="external">React 入门实例教程</a>，css88网站的<a href="http://www.css88.com/react/index.html" target="_blank" rel="external">React中文版资料</a>，<a href="https://facebook.github.io/react/" target="_blank" rel="external">React官网</a>。前面两个资料都比较旧，官网上面已经到了v15.4.0了，所以这篇笔记记录的这些知识点都是参考官网的。有错误或者疏漏希望各位看客大神多多指正！</p>
-<h3 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h3><p>在线编辑器推荐<a href="http://codepen.io/gaearon/pen/rrpgNB?editors=0010" target="_blank" rel="external">codepen</a>，IDE推荐WebStorm、<a href="https://github.com/babel/babel-sublime" target="_blank" rel="external">babel-sublime</a>。调试可以使用<code>React Devtools</code>，有针对<a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" target="_blank" rel="external">Chrome</a>的也有针对<a href="https://addons.mozilla.org/en-US/firefox/addon/react-devtools/" target="_blank" rel="external">Firefox</a>的，推荐使用Chrome。要想完全看懂接下来这些demo中的代码，需要对<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ES6</a>有一定了解。<br>这个是我的demo壳，接下来的大部分例子都能直接放到这里运行。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/react@latest/dist/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/react-dom@latest/dist/react-dom.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/babel-standalone@6.15.0/babel.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="comment">//TODO 在这里添加代码</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h3><p>在线编辑器推荐<a href="http://codepen.io/gaearon/pen/rrpgNB?editors=0010" target="_blank" rel="external">codepen</a>，IDE推荐WebStorm、<a href="https://github.com/babel/babel-sublime" target="_blank" rel="external">babel-sublime</a>。调试可以使用<code>React Devtools</code>，有针对<a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" target="_blank" rel="external">Chrome</a>的也有针对<a href="https://addons.mozilla.org/en-US/firefox/addon/react-devtools/" target="_blank" rel="external">Firefox</a>的，推荐使用Chrome。要想完全看懂接下来这些demo中的代码，需要对<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ES6</a>有一定了解。<br>这个是我的demo壳，接下来的大部分例子都能直接放到这里运行。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/react@latest/dist/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/react-dom@latest/dist/react-dom.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/babel-standalone@6.15.0/babel.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span><span class="undefined"></span></div><div class="line">    //TODO 在这里添加代码</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p><code>JSX</code>是<code>JavaScript</code>的一种拓展，为了直观的了解<code>JSX</code>长什么样，先上代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span>/&gt;</span>;</span></div><div class="line">ReactDOM.render(</div><div class="line">    element,</div><div class="line">    document.getElementById('root')</div><div class="line">);</div></pre></td></tr></table></figure></p>
 <p>我们发现 <code>JavaScript</code>代码里面竟然出现了<code>Html</code>标签，没错这就是<code>JSX</code>。那这种奇怪的语法浏览器能执行吗？当然不能！所以我们要在<code>script</code>标签的<code>type</code>里面写上<code>text/babel</code>，让<code>babel</code>来处理它，例如上面的代码中的：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span>/&gt;</span>;</span></div></pre></td></tr></table></figure>
@@ -417,15 +417,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/12/21/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/21/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -451,8 +451,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/09/react/"
-           data-title="React" data-url="http://yoursite.com/2016/12/09/react/">
+      <div class="ds-thread" data-thread-key="2016/12/23/rc/"
+           data-title="React" data-url="http://yoursite.com/2016/12/23/rc/">
       </div>
     
   </div>
