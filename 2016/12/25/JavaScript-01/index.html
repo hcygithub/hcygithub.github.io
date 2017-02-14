@@ -93,7 +93,7 @@
 <meta property="og:description" content="概念语法标识符命名JavaScript标识符跟Java类似，首字符必须以字母（ASCII或者Unicode），下划线_，美元符号$开始，其它字符可以是字母，下划线、美元符号、数字；标识符大小写敏感；标识符不能使用保留关键字。12var 变量名 = &apos;sdafsd&apos;;alert(变量名);
 上面这种可以运行但是不推荐使用，实践中字母只使用a-z``A-Z这些字母，并且推荐使用驼峰命名法（除了第一个单">
 <meta property="og:image" content="http://oij3dl0nn.bkt.clouddn.com/blog/20161227/182408771.png">
-<meta property="og:updated_time" content="2016-12-28T12:43:55.229Z">
+<meta property="og:updated_time" content="2017-02-14T12:19:06.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础">
 <meta name="twitter:description" content="概念语法标识符命名JavaScript标识符跟Java类似，首字符必须以字母（ASCII或者Unicode），下划线_，美元符号$开始，其它字符可以是字母，下划线、美元符号、数字；标识符大小写敏感；标识符不能使用保留关键字。12var 变量名 = &apos;sdafsd&apos;;alert(变量名);
@@ -385,10 +385,11 @@
 <p>很显然这段代码会输出<code>hello</code>，因为<code>msg</code>是全局对象，能在<code>test</code>方法中被引用到（至于为什么能被引用到以后会专门说到），但是如果再加两行代码，大家还能猜到会输出什么吗？<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> msg = <span class="string">'hello'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(msg);</div><div class="line">    <span class="keyword">var</span> msg = <span class="string">'world'</span>;</div><div class="line">    <span class="built_in">console</span>.log(msg);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure></p>
 <p>可能会有小伙伴认为这个代码的两个log分别会输出<code>hello</code> <code>world</code>，事实并不是这样，我们要这样分析，首先<code>JavaScript</code>解释器会把<code>test</code>函数作用域里面定义的变量都扫描一遍，把变量声明提到作用域的最前面，于是乎代码变成了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> msg = <span class="string">'hello'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line"> <span class="keyword">var</span> msg;</div><div class="line">    <span class="built_in">console</span>.log(msg);</div><div class="line">    msg = <span class="string">'world'</span>;</div><div class="line">    <span class="built_in">console</span>.log(msg);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure></p>
 <p>这下大家都能猜到这段代码会输出什么了吧，两个log分别输出了<code>undefined</code> <code>hello</code>。</p>
-<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><h5 id="6种数据类型"><a href="#6种数据类型" class="headerlink" title="6种数据类型"></a>6种数据类型</h5><p>JavaScript中有5种基本数据类型：Undefined、Null、Boolean、Number、String，还有一种复杂数据类型：Object</p>
-<p>Undefined<br>这种类型只有一个值undefined；一个变量只是声明了，没有赋值，那他的默认值就是undefined</p>
-<p>Null<br>这种类型也只有一个值null；null表示的是一个空对象指针<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>);<span class="comment">//输出为true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>);<span class="comment">//输出为false，这个以后再解释</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span> == <span class="keyword">typeof</span> <span class="literal">undefined</span>);<span class="comment">//输出为false</span></div></pre></td></tr></table></figure></p>
-<p>null</p>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><h5 id="6种数据类型"><a href="#6种数据类型" class="headerlink" title="6种数据类型"></a>6种数据类型</h5><p><code>JavaScript</code>中有5种基本数据类型：<code>Undefined</code>、<code>Null</code>、<code>Boolean</code>、<code>Number</code>、<code>String</code>，还有一种复杂数据类型：<code>Object</code></p>
+<p>Undefined<br>这种类型只有一个值<code>undefined</code>；一个变量只是声明了，没有赋值，那他的默认值就是<code>undefined</code></p>
+<p>Null<br>这种类型也只有一个值<code>null</code>；<code>null</code>表示的是一个空对象指针<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>);<span class="comment">//输出为true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>);<span class="comment">//输出为false，这个以后再解释</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span> == <span class="keyword">typeof</span> <span class="literal">undefined</span>);<span class="comment">//输出为false</span></div></pre></td></tr></table></figure></p>
+<p><code>null</code>跟<code>undefined</code>的区别在于，<code>null</code>一般是我们主动赋值，<code>undefined</code>一般是系统赋值</p>
+<p>Boolean<br><code>ECMAScript</code>所有类型的值都可以等价于<code>true</code>或者<code>false</code>；除了空字符串、<code>0</code>、<code>NaN</code>、<code>null</code>、<code>undefined</code>等价<code>false</code>，其它值都等价<code>true</code></p>
 
       
     </div>
@@ -581,7 +582,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
